@@ -23,12 +23,6 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
-Route::get('/mysql', function () {
-    
-    Artisan::call('migrate', ['--force' => true]);
-    Artisan::call('db:seed', ['--force' => true]);
-});
-
 Route::get('/about', function () {
     return view('user.about');
 });
